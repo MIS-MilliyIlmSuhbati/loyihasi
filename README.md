@@ -1,2 +1,2 @@
-# mis-website
+#jamoasi
 MIS- Milliy Ilm Suhbati
