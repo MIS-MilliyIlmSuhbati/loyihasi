@@ -368,18 +368,24 @@
             position: relative;
         }
         
-        .event-slider {
-            display: flex;
-            gap: 30px;
-            overflow-x: auto;
-            padding: 20px;
-            scrollbar-width: none;
-            scroll-behavior: smooth;
-        }
+       // TADBIRLAR SLIDER (TO'G'RILANGAN)
+document.addEventListener('DOMContentLoaded', function() {
+    const eventSlider = document.getElementById('eventSlider');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    if (eventSlider && prevBtn && nextBtn) {
+        const cardWidth = 320 + 30; // card width + gap
         
-        .event-slider::-webkit-scrollbar {
-            display: none;
-        }
+        nextBtn.addEventListener('click', () => {
+            eventSlider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            eventSlider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+    }
+});
         
         .event-showcase-card {
             flex: 0 0 320px;
