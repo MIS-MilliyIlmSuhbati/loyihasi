@@ -3,331 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIS – Milliy Ilm Suhbati</title>
 
-<title>MIS — Milliy Ilm Suhbati</title>
-
-<meta name="description" content="MIS — Milliy Ilm Suhbati. O‘zbek tilida dunyoni tahlil qiluvchi premium ilmiy suhbatlar platformasi.">
-
-<style>
-:root{
-    --main:#c22820;
-    --gold:#deb05a;
-    --dark:#1a0e0e;
-    --card:rgba(0,0,0,.35);
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Georgia","Times New Roman",serif;
-}
-
-html{scroll-behavior:smooth;}
-
-body{
-    background:radial-gradient(circle at top,var(--main),#7a1612);
-    color:var(--gold);
-    line-height:1.85;
-}
-
-/* ===== HEADER ===== */
-header{
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:999;
-    background:rgba(122,22,18,.95);
-    border-bottom:1px solid rgba(222,176,90,.3);
-    padding:20px 80px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-weight:900;
-    letter-spacing:2px;
-    font-size:18px;
-}
-
-nav a{
-    color:var(--gold);
-    text-decoration:none;
-    margin-left:34px;
-    font-size:14px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    transition:opacity .3s;
-}
-nav a:hover{opacity:.7}
-
-/* ===== HERO ===== */
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:140px 20px 60px;
-}
-
-.hero-inner{
-    max-width:900px;
-    border:1px solid rgba(222,176,90,.35);
-    padding:70px 60px;
-    background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15));
-}
-
-.hero h1{
-    font-size:3.3rem;
-    letter-spacing:3px;
-    margin-bottom:30px;
-}
-
-.hero p{
-    font-size:1.1rem;
-}
-
-/* ===== SECTION ===== */
-section{
-    padding:130px 90px;
-}
-
-section h2{
-    font-size:2.6rem;
-    letter-spacing:2px;
-    margin-bottom:60px;
-    text-align:center;
-}
-
-/* ===== CARDS ===== */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:40px;
-}
-
-.card{
-    background:var(--card);
-    border:1px solid rgba(222,176,90,.3);
-    padding:45px;
-    transition:transform .4s, box-shadow .4s;
-}
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 50px rgba(0,0,0,.4);
-}
-
-.card h3{
-    margin-bottom:20px;
-    font-size:1.3rem;
-    letter-spacing:1px;
-}
-
-/* ===== TIMELINE ===== */
-.timeline{
-    max-width:900px;
-    margin:0 auto;
-}
-.step{
-    background:var(--card);
-    border-left:4px solid var(--gold);
-    padding:30px 40px;
-    margin-bottom:25px;
-}
-
-/* ===== FORM ===== */
-.form-box{
-    max-width:650px;
-    margin:0 auto;
-    background:var(--card);
-    padding:50px;
-    border:1px solid rgba(222,176,90,.3);
-}
-
-.form-box h3{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-input,textarea{
-    width:100%;
-    padding:14px;
-    margin-bottom:15px;
-    background:#1a0e0e;
-    border:1px solid rgba(222,176,90,.4);
-    color:var(--gold);
-}
-
-button{
-    width:100%;
-    padding:16px;
-    background:var(--gold);
-    color:var(--main);
-    font-weight:800;
-    border:none;
-    cursor:pointer;
-}
-
-/* ===== FOOTER ===== */
-footer{
-    padding:40px;
-    text-align:center;
-    background:#1a0e0e;
-    border-top:1px solid rgba(222,176,90,.3);
-    font-size:14px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-    header{padding:18px 25px;}
-    section{padding:100px 25px;}
-    .hero-inner{padding:50px 30px;}
-    .hero h1{font-size:2.4rem;}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <div class="logo">MIS — Milliy Ilm Suhbati</div>
-    <nav>
-        <a href="#home">Bosh sahifa</a>
-        <a href="#philosophy">Falsafa</a>
-        <a href="#format">Format</a>
-        <a href="#analysis">Tahlil</a>
-        <a href="#rules">Qoidalar</a>
-        <a href="#contact">Aloqa</a>
+<!-- HEADER -->
+<header id="header">
+  <div class="nav">
+    <div class="logo">
+      <img src="assets/loyiha.jpg" alt="MIS logo">
+    </div>
+
+    <div class="burger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+
+    <nav class="menu" id="menu">
+      <a href="#hero">Bosh sahifa</a>
+      <a href="#about">Loyiha</a>
+      <a href="#format">Format</a>
+      <a href="#events">Tadbirlar</a>
+      <a href="#contact">Aloqa</a>
     </nav>
+  </div>
 </header>
 
-<section id="home" class="hero">
-<div class="hero-inner">
-<h1>MILLIY ILM SUHBATI</h1>
-<p>
-Dildan Suhbatlar orqali odamlarga dunyoni o‘zimizning milliy o‘zbek tilimiz bilan
-chuqur o‘rganishga va uni o‘zlari uchun yangidan kashf etishga yordam beramiz.
-Bu platforma — fikr, tahlil va mustaqil xulosa maydoni.
-</p>
-</div>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <h1>MIS – Milliy Ilm Suhbati</h1>
+    <p>
+      Dildan suhbatlar orqali dunyoni o‘zimizning milliy o‘zbek tilimizda
+      chuqur tahlil qilish, savol berish, fakt bilan isbotlash
+      va mustaqil xulosa chiqarishga chorlaymiz.
+    </p>
+    <a href="#about" class="cta">Loyihani kashf etish</a>
+  </div>
 </section>
 
-<section id="philosophy">
-<h2>Loyiha Falsafasi</h2>
-<div class="grid">
-<div class="card">
-<h3>🧠 Tafakkur</h3>
-<p>
-MIS — tayyor fikr bermaydi. Biz savol tashlaymiz, fakt keltiramiz va
-auditoriyani mustaqil o‘ylashga undaymiz.
-</p>
-</div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">Loyiha mohiyati</h2>
 
-<div class="card">
-<h3>📚 Ilmiylik</h3>
-<p>
-Har bir mavzu faktlarga asoslanadi.
-Shaxsiy fikrlar aniq ajratilgan holda subyektiv sifatida beriladi.
-</p>
-</div>
+    <div class="cards">
+      <div class="card">
+        <h3>🧠 Tahliliy fikrlash</h3>
+        <p>
+          Har bir dildan suhbat savol bilan boshlanadi,
+          faktlar bilan isbotlanadi va subyektiv xulosa bilan yakunlanadi.
+        </p>
+      </div>
 
-<div class="card">
-<h3>🕌 Milliylik</h3>
-<p>
-Biz o‘zbek tilining ilmiy salohiyatini namoyon qilamiz.
-Global loyihalarga taqlid emas, milliy yondashuv.
-</p>
-</div>
-</div>
+      <div class="card">
+        <h3>🗣 Ilm-fan shaydolari</h3>
+        <p>
+          Auditoriya hurmat qilinadi, fikrlar tinglanadi,
+          qarshi chiqish emas, anglash ustuvor bo‘ladi.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>⏱ 20 daqiqa</h3>
+        <p>
+          Har bir nutq 20 daqiqa davom etadi.
+          1 yoki 2 mavzu chuqur va tizimli tahlil qilinadi.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📚 Til va madaniyat</h3>
+        <p>
+          Qo‘pol so‘zlar, sheva va 18+ mavzular qat’iyan man etiladi.
+          Xorijiy so‘z ishlatilsa, darhol ma’nosi tushuntiriladi.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="format">
-<h2>Dildan Suhbat Formati</h2>
+<!-- FORMAT -->
+<section id="format" class="dark">
+  <div class="container">
+    <h2 class="section-title">MIS va TED Talk</h2>
 
-<div class="timeline">
-<div class="step">
-<strong>🎙 Kirish</strong><br>
-“Assalomu alaykum, ilm-fan shaydolari… bugun sizlar bilan ushbu mavzuni birgalikda tahlil qilamiz.”
-</div>
+    <div class="cards">
+      <div class="card gold-border">
+        <h3>🇺🇿 MIS</h3>
+        <p>
+          Milliy til, auditoriya bilan muloqot,
+          savol–fakt–xulosa asosidagi chuqur tahlil.
+        </p>
+      </div>
 
-<div class="step">
-<strong>❓ Savol</strong><br>
-Mavzu boshlanishidan oldin auditoriyaga umumiy savol tashlanadi.
-</div>
-
-<div class="step">
-<strong>👥 Auditoriya</strong><br>
-Har bir fikr hurmat bilan tinglanadi.
-</div>
-
-<div class="step">
-<strong>📊 Fakt</strong><br>
-Ilmiy va isbotlangan ma’lumotlar bilan tahlil qilinadi.
-</div>
-
-<div class="step">
-<strong>🧩 Xulosa</strong><br>
-Nutq so‘zlovchi o‘z subyektiv fikrini bildiradi.
-</div>
-</div>
+      <div class="card">
+        <h3>🌍 TED Talk</h3>
+        <p>
+          Global format, asosan monolog,
+          ingliz tilida taqdimot.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="analysis">
-<h2>Tahlil Metodologiyasi</h2>
-<div class="grid">
-<div class="card">
-<h3>🔍 Parchalash</h3>
-<p>Mavzu kichik qismlarga ajratilib ko‘rib chiqiladi.</p>
-</div>
-<div class="card">
-<h3>⚖ Qarama-qarshilik</h3>
-<p>Turli qarashlar solishtiriladi.</p>
-</div>
-<div class="card">
-<h3>🧠 Mustaqil xulosa</h3>
-<p>Tomoshabin tayyor fikr emas, xulosa oladi.</p>
-</div>
-</div>
+<!-- EVENTS -->
+<section id="events">
+  <div class="container">
+    <h2 class="section-title">Tadbirlar</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>📅 Dildan suhbat</h3>
+        <p>
+          Jamiyatda trend bo‘layotgan va shubha uyg‘otayotgan mavzular
+          sinchiklab tahlil qilinadi.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎤 Ochiq muhokama</h3>
+        <p>
+          Auditoriyadan savol olinadi,
+          fikrlar eshitiladi va umumiy xulosa chiqariladi.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="rules">
-<h2>Qat’iy Qoidalar</h2>
-<div class="grid">
-<div class="card"><h3>🚫 Axloq</h3><p>Qo‘pol, ko‘cha, sheva so‘zlari qat’iyan man etiladi.</p></div>
-<div class="card"><h3>🔞 Yosh</h3><p>15+ yosh talabi.</p></div>
-<div class="card"><h3>🌍 Til</h3><p>Xorijiy so‘zlar tarjima bilan aytiladi.</p></div>
-<div class="card"><h3>🏛 Siyosat</h3><p>Mumkin, ammo shaxsga tegish yo‘q.</p></div>
-</div>
-</section>
+<!-- CONTACT -->
+<section id="contact" class="banner">
+  <div class="container">
+    <h2 class="section-title light">Aloqa va ishtirok</h2>
 
-<section id="contact">
-<h2>Aloqa va Ishtirok</h2>
+    <div class="contact-box">
+      <p>
+        MIS – Milliy Ilm Suhbati loyihasi bilan hamkorlik qilish,
+        nutq so‘zlash yoki taklif berish uchun murojaat qiling.
+      </p>
 
-<div class="form-box">
-<h3>📝 Dildan suhbat uchun murojaat</h3>
-
-<!-- Google Form LINK qo‘yiladi -->
-<form action="https://docs.google.com/forms/d/e/FORM_ID/viewform" target="_blank">
-<input type="text" placeholder="Ismingiz va familiyangiz">
-<input type="email" placeholder="Email manzilingiz">
-<input type="text" placeholder="Taklif qilayotgan mavzu">
-<textarea placeholder="Nega aynan shu mavzu muhim deb o‘ylaysiz?"></textarea>
-<button type="submit">Google Form orqali yuborish</button>
-</form>
-
-<p style="margin-top:20px;font-size:14px;">
-📌 Forma Google Form orqali yuboriladi va rasmiy ko‘rib chiqiladi.
-</p>
-</div>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfREPLACE/viewform?embedded=true"
+        width="100%" height="600" frameborder="0">
+      </iframe>
+    </div>
+  </div>
 </section>
 
 <footer>
-© 2025 MIS — Milliy Ilm Suhbati  
-Bir yutamiz. O‘z dunyoyingni yarat.
+  <p>© 2025 MIS – Milliy Ilm Suhbati. Bir yutamiz.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
-
